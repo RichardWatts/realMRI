@@ -23,7 +23,7 @@ Start with a point 8 pixels above the center of k-space. When we inverse Fourier
 
 We’ll do the same thing, but with 4 pixels to the right of the center. This time, the waves run from left to right. What about a pixel 4 to the right and 4 up? This time we end up with a diagonal wave.
 
-Each pixel in k-space represents a certain “spatial frequency” or wavelength and direction. In you remember a little bit of high school physics, you might recall that the wavelength of a sound is inversely related to its frequency. While with sound, frequency has units of Hz, or s-1, in imaging, spatial frequency has units of cm-1, or waves per centimeter. A spatial frequency of 2cm-1 has 2 waves per centimeter, or a wavelength of ½cm.
+Each pixel in k-space represents a certain “spatial frequency” or wavelength and direction. In you remember a little bit of high school physics, you might recall that the wavelength of a sound is inversely related to its frequency. While with sound, frequency has units of Hz, or s\ :sup:`-1`, in imaging, spatial frequency has units of cm-1, or waves per centimeter. A spatial frequency of 2cm\ :sup:`-1` has 2 waves per centimeter, or a wavelength of half a cm.
 
 The Fourier transform is called a linear transformation, which means that adding two signals in k-space results in a signal in image space being the sum of the waves that the signals would have generated individually. These waves interfere with each other (like a diffraction pattern that you may have seen in a physics class). If we add together vertical and horizontal waves, for example, we end up with a grid-like pattern.
 
