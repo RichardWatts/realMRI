@@ -9,7 +9,7 @@ To get at information about the third dimension, we encode that information in t
 Phase Encoding
 --------------
 
-What would happen if we switch on a magnetic field gradient in the y-direction for a short amount of time between the slice selective excitation and the frequency-encoded readout? During this short period, the magnetic field varies depending on the strength of the magnetic field gradient Gy, and the location Y.
+What would happen if we switch on a magnetic field gradient in the y-direction for a short amount of time between the slice selective excitation and the frequency-encoded readout? During this short period, the magnetic field varies depending on the strength of the magnetic field gradient GY, and the location Y.
 
 .. math::
 

@@ -44,7 +44,7 @@ If the magnetic field is a function of Z, then so is the Larmor frequency.
 
 .. math::
 
-   \omega (Z) = \gamma (B_0 + G_Z Z)
+   \omega (Z) = \gamma B(Z) = \gamma (B_0 + G_Z Z)
 
 To emphasize, the resonant frequency of the protons within the body now varies linearly with their location along the Z-axis, as shown. If we now want to excite those protons within a given slice, we need to apply a radiofrequency pulse with just the right range of frequencies to select that particular slice. It is actually reasonably straightforward to generate an RF pulse with a given center frequency and bandwidth (frequency range).
 
@@ -85,7 +85,7 @@ Once we have excited the slice that we want, we now need to figure out where in 
 
   **Fourier Transforms**
 
-  Time and frequency are related properties. If we see waves crashing on the beach every two seconds, then the frequency of that wave is 1/2s = 0.5 Hz. Musical instruments such as a guitar string do not just generate a single frequency of sound – if they did, their sound would be uninteresting, and every instrument would sound the same. The richness of musical instruments comes from the additional frequencies (harmonics) accompanying the main (fundamental) frequency.
+  Time and frequency are related properties. If we see waves crashing on the beach every two seconds, then the frequency of that wave is 1/2 s = 0.5 Hz. Musical instruments such as a guitar string do not just generate a single frequency of sound – if they did, their sound would be uninteresting, and every instrument would sound the same. The richness of musical instruments comes from the additional frequencies (harmonics) accompanying the main (fundamental) frequency.
 
   If we record the sound from an instrument using a microphone, we can see directly the rapidly oscillating pressure wave that we know as sound. As with MRI, the microphone and analog to digital converter (ADC) record a signal as a function of time. The Fourier transform is a mathematical manipulation that converts a signal as a function of time into a frequency spectrum (signal as a function of frequency). Looking at the frequency spectrum of a guitar string, we can see that the frequency spectrum contains several harmonics, but that the frequencies are related, all being multiples of a single fundamental frequency.
 
@@ -105,7 +105,7 @@ so
 
    \omega (X) = \gamma (B_0 + G_X X)
 
-We now listen to the signal being received by our RF receiver coil(s). The signal that we measure will contain a range of frequencies. The signals coming from the left side of the body (X<0) will have lower frequencies than those coming from the right (X>0). However, what we measure is the signal as a function of time (sampling it using an analog-to-digital converter, ADC). However, we can calculate which frequencies are hidden within this signal by calculating its Fourier Transform. The Fourier transform of a signal as a function of time, :math:`{s(t)}` gives us a signal as a function of frequency, :math:`{s(\omega)}`. Since there is a direct, linear relationship between frequency and spatial location along X, :math:`{s(\omega)}` represents the signal as a function of location in X – a line scan through the selected slice. The scaling between frequency and position is determined by the readout magnetic field gradient strength (in our case, the magnetic field gradient is applied along the X-axis, so the frequency is determined by the X-location).
+We now listen to the signal being received by our RF receiver coil(s). The signal that we measure will contain a range of frequencies. The signals coming from the left side of the body (X<0) will have lower frequencies than those coming from the right (X>0). However, what we measure is the signal as a function of time (sampling it using an analog-to-digital converter, ADC). However, we can calculate which frequencies are hidden within this signal by calculating its Fourier Transform. The Fourier transform of a signal as a function of time, :math:`{s(t)}` gives us a signal as a function of frequency, :math:`{S(\omega)}`. Since there is a direct, linear relationship between frequency and spatial location along X, :math:`{S(\omega)}` represents the signal as a function of location in X – a line scan through the selected slice. The scaling between frequency and position is determined by the readout magnetic field gradient strength (in our case, the magnetic field gradient is applied along the X-axis, so the frequency is determined by the X-location).
 
 The calculation of what frequency corresponds to what location is essentially identical to the frequency calculation for the transmit RF pulse, except now we measure the frequency and want to calculate the location. To reuse the calculation outlined previously, if we use a readout gradient strength of 10 mT/m, then if we measure a signal at a frequency of 127,757,032 Hz, then this signal must come from an object (or part of an object) located 40mm in X from the isocenter.
 
@@ -163,7 +163,7 @@ Components of an MRI Scanner
 
 That’s it. Only four components, one of which we have no control over (the main magnetic field), and one of which we can only switch on and off, and some other minor tweaks (the RF receiver). All we can do with our hugely expensive MRI scanner is to send waveforms to four generators [#]_ (three gradients and one RF). A pulse sequence diagram tells you what signals are sent, and their timing. This describes everything about how the scanner acquires data, and varying these four waveforms gives us the amazing richness of contrasts that MRI can generate. The four signals are conventionally labeled Gx, Gy, Gz for the X, Y, and Z magnetic field gradients, and RF.
 
-Isn’t it amazing that MRI physicists are paid to think up and implement new combinations of these four waveforms? Hopefully you already understand some parts of this diagram. When you understand the rest, then you - the apprentice - will have become the master of MRI!
+Isn’t it amazing that MRI physicists are paid to think up and implement new combinations of these four waveforms? Hopefully you already understand some parts of this diagram. When you understand the rest, then you -- the apprentice -- will have become the master of MRI!
 
 
 .. rubric:: Footnotes

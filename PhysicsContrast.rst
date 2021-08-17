@@ -8,9 +8,9 @@ At this point, we can consider the contrast in the MR image and the spatial loca
 
 One of the magical things about MRI is that we can tweak the acquisition parameters to generate an amazing range of different contrasts. Even better, the signals from different tissue types can be very different, giving us intrinsically strong soft-tissue contrast (bones don’t contain much hydrogen and are usually not so good). Compare this with X-ray imaging, where the X-ray attenuation difference between (for example) white matter, grey matter and cerebrospinal fluid (all the stuff in your skull) differ by about 1%.
 
-Where does this contrast come from? The most obvious source of contrast is due to the differing concentrations of hydrogen nuclei. Images with this type of contrast are known as proton density (PD) weighted images. PD-weighted images often don’t have very much signal variation between different tissue types, and have limited utility for medical imaging.
+Where does this contrast come from? The most obvious source of contrast is due to the differing concentrations of hydrogen nuclei. Images with this type of contrast are known as proton density (PD) weighted images. PD-weighted images of the brain don’t have very much signal variation between different tissue types, and have limited utility. They are more useful in other areas, such as orthopedics.
 
-How else can we generate contrast? We will start by looking at two types of contrast that are based on the intrinsic magnetic properties of different tissue types.  These two contrast types are based on two characteristic magnetic relaxation rates, whose characteristic times (similar to a radioactive half-life) have been imaginatively named T1 and T2. Images whose contrast is primarily determined by these relaxation rates/times are known as T1-weighted and T2-weighted images respectively. To understand T1 and T2, we must learn a bit more about *spin physics*.
+How else can we generate contrast? We will start by looking at two types of contrast that are based on the intrinsic magnetic properties of different tissue types.  These contrasts are based on two different magnetic relaxation rates, whose characteristic times (similar to a radioactive half-life) have been imaginatively named T1 and T2. Images whose contrast is primarily determined by these relaxation rates/times are known as T1-weighted and T2-weighted images respectively. To understand T1 and T2, we must learn a bit more about *spin physics*.
 
 Spin Physics
 ------------
@@ -22,25 +22,25 @@ In the MRI world, the word spin is often used interchangeably with proton (which
    Longitudinal and transverse magnetization.
 
 
-To describe the magnetic state of an object, we refer to its longitudinal and transverse magnetization (Figure 2). Longitudinal magnetization is the component of the magnetization in the direction of the main magnetic field. Transverse magnetization is the component perpendicular to the main magnetic field, and it is this component that precesses at the Larmor frequency, generating a measurable signal. It makes more sense to talk about a transverse component than X- and Y-components because as the magnetization precesses, its direction rotates, sometimes towards the X-axis, and other times towards the Y-axis.
+To describe the magnetic state of an object, we refer to its longitudinal and transverse magnetization. Longitudinal magnetization is the component of the magnetization in the direction of the main magnetic field. Transverse magnetization is the component perpendicular to the main magnetic field, and it is this component that precesses at the Larmor frequency, generating a measurable signal. It makes more sense to talk about a transverse component than X- and Y-components because as the magnetization precesses, its direction rotates, sometimes towards the X-axis, and other times towards the Y-axis.
 
 A non-ferromagnetic object has no net magnetization in the absence of an externally applied magnetic field, so both the transverse and longitudinal components are zero. When we put that object into the strong magnetic field of an MRI scanner, it will become magnetized in the direction of the field, giving it a longitudinal magnetization.
 
-Applying an alternating magnetic field (a radio wave) at just the right resonant frequency allows us to push the magnetization away from the longitudinal direction (similar to pushing on a child’s swing). The total angle that we push the spin away from its axis (the direction of the main magnetic field) depends on the amplitude and duration of the radiofrequency (RF) pulse that we apply. This angle is called the flip angle, and the short radio wave that we use is called a radiofrequency (RF) pulse.
+Applying an alternating magnetic field (a radio wave) at just the right resonant frequency allows us to push the magnetization away from the longitudinal direction (similar to pushing on a child’s swing). The total angle that we push the spin away from its axis (the direction of the main magnetic field) depends on the amplitude and duration of the radiofrequency (RF) pulse that we apply. This angle is called the flip angle, and the short duration radio wave that we use is called a radiofrequency (RF) pulse.
 
 .. figure:: images/RF-90.png
 
    A 90 degree RF pulse converts all the longitudinal magnetization to transverse magnetization
 
 
-We commonly use a flip angle of 90° to rotate the magnetization from the longitudinal direction to the transverse plane. This gives us the maximum transverse magnetization. It is only the transverse component that we can measure, so a 90° flip angle gives us the maximum signal.
+We commonly use a flip angle of 90 degrees to rotate the magnetization from the longitudinal direction to the transverse plane. This gives us the maximum transverse magnetization. It is only the transverse component that we can measure, so a 90 degree flip angle gives us the maximum signal.
 
-Following the “90° RF pulse”, we have a large precessing magnetization generating lots of lovely NMR signal. All good things must come to an end, and the signal dies away rapidly. Likewise, the longitudinal magnetization, which is zero following the RF pulse, recovers back to its equilibrium, somewhat more slowly. The loss of transverse magnetization is termed T2- or T2*-decay (for the moment we will refer to these processes as simply T2-decay. Later we will discover the distinction between the two, and how we can make our signal sensitive to one or the other), and the recovery of longitudinal magnetization is termed T1-recovery. It is important to recognize that T1-recovery and T2-decay are separate physical processes, and that the total (net) magnetization is not constant.
+Following the “90 degree RF pulse”, we have a large precessing magnetization generating lots of lovely NMR signal. All good things must come to an end, and the signal dies away rapidly. Likewise, the longitudinal magnetization, which is zero following the RF pulse, recovers back to its equilibrium, somewhat more slowly. The loss of transverse magnetization is termed T2- or T2*-decay (for the moment we will refer to these processes as simply T2-decay. Later we will discover the distinction between the two, and how we can make our signal sensitive to one or the other), and the recovery of longitudinal magnetization is termed T1-recovery. It is important to recognize that T1-recovery and T2-decay are separate physical processes, and that the total (net) magnetization is not constant.
 
 T2 decay
 --------
 
-After the application of an RF pulse, some (all in the case of a 90° pulse) of the magnetization is rotated into the transverse plane. If we remember that the magnetization is the sum of the signals from all the protons (spins) in the object, then to generate a net transverse magnetization, their precessions must be synchronized; if their phases were random then the signals would just cancel each other out. Another way of saying this is that the spins have phase coherence.
+After the application of an RF pulse, some (all in the case of a 90 degree pulse) of the magnetization is rotated into the transverse plane. If we remember that the magnetization is the sum of the signals from all the protons (spins) in the object, then to generate a net transverse magnetization, their precessions must be synchronized; if their phases were random then the signals would just cancel each other out. Another way of saying this is that the spins have phase coherence.
 
 If every proton precessed at precisely the same frequency, then they would maintain this phase coherence. However, the magnetic field is not completely uniform, either on a macroscopic or microscopic scale. From the Larmor equation, variations in magnetic field give variations in resonant frequency, which cause the spins to get out of sync with each other (dephase). Dephasing results in a loss of net magnetization, and a rapid decay of signal with time. This is called T2-decay, and the decay rate depends on the uniformity of the magnetic environment that the spins find themselves in.
 
@@ -137,15 +137,7 @@ What do we mean by a long TE or a short TR? It is their values relative to the c
 What’s Bright and What’s Dark?
 ------------------------------
 
-We now have enough information to understand the contrast in an MR image based on the T1 and T2 values for each tissue type. Values for common tissue types are listed in Table 1.
-
-Consider the three head images shown in Figure 2. The main tissue types that we can identify in the image are white matter, grey matter, cerebrospinal fluid (CSF) and fat.
-
-  On the proton density weighted image, there is little contrast.
-
-  On the T1-weighted image, CSF is dark because it has a very long T1 value (compared to the TR), so its magnetization recovers very little between one acquisition and the next. Grey matter is similarly darker than white matter because it has a longer T1 value. Fat is brightest because of its short T1.
-
-  On the T2-weighted image, CSF is bright because its signal decays slowly following the RF pulse. Grey matter is brighter than white matter because of its somewhat longer T2 value. Fat is darker due to its short T2.
+We now have enough information to understand the contrast in an MR image based on the T1 and T2 values for each tissue type. Values for common tissue types are listed below.
 
 .. table:: T1- and T2-values of various tissue types (at 1.5T and 3.0T, from Stanisz et al, MRM 54:507-512, 2005, Gold et al, AJR 183:343 2004). The magic of MRI is that these values vary widely between tissue types, giving MRI very high intrinsic contrast.
 
@@ -160,6 +152,15 @@ Consider the three head images shown in Figure 2. The main tissue types that we 
   Blood                     1441    327     1932    275
   ========================= ======= ======= ======= =======
   
+
+Consider the three head images shown. The main tissue types that we can identify in the image are white matter, grey matter, cerebrospinal fluid (CSF) and fat.
+
+  On the proton density weighted image, there is little contrast.
+
+  On the T1-weighted image, CSF is dark because it has a very long T1 value (compared to the TR), so its magnetization recovers very little between one acquisition and the next. Grey matter is similarly darker than white matter because it has a longer T1 value. Fat is brightest because of its short T1.
+
+  On the T2-weighted image, CSF is bright because its signal decays slowly following the RF pulse. Grey matter is brighter than white matter because of its somewhat longer T2 value. Fat is darker due to its short T2.
+
 
 .. table:: Basic image weightings
 

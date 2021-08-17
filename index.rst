@@ -35,6 +35,7 @@ The concept behind this document is to provide several explanations at increasin
    kSpaceWithoutMath
    kSpaceWithMath
    Hitchhiker
+   Animated
    FAQ
    Acknowledgements
 
