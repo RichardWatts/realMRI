@@ -29,7 +29,7 @@ The Fourier transform is called a linear transformation, which means that adding
 
 Any image can be made up of a suitable sum of waves of a range of spatial frequencies and directions. This is just the two-dimensional equivalent of decomposing a sound into its component frequencies, which is the basis of audio compression formats such as MP3 files.
 
-You may now be wondering which this interesting (or perhaps not-so-interesting) discussion of Fourier transforms and spatial frequencies has to do with MRI. Patience, all (or at least some) of this will be revealed in the next section.
+You may now be wondering what this interesting (or perhaps not-so-interesting) discussion of Fourier transforms and spatial frequencies has to do with MRI. Patience, all (or at least some) of this will be revealed in the next section.
 
 
 .. table:: k-space and the corresponding image-space waves. White regions correspond to the peak of the wave and black the tough. The distance from the origin (marked with a cross) in k-space corresponds to the spatial frequency with the angle determining the direction of the wave.
